@@ -1,0 +1,20 @@
+description = 'Allure 1C Plugin'
+
+apply plugin: 'java-library-distribution'
+
+jar {
+    archiveName = 'plugin.jar'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly('io.qameta.allure:allure-plugin-api:2.9.0')
+    testCompile('io.qameta.allure:allure-generator:2.9.0')
+    testCompile('io.qameta.allure:allure-java-commons:2.9.0')
+    testCompile('junit:junit:4.12')
+    testCompile('org.assertj:assertj-core:3.10.0')
+    testCompile('org.mockito:mockito-core:2.19.1')
+}
