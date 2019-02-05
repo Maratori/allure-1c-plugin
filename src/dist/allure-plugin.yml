@@ -4,6 +4,7 @@ description: The plugin adds 1C logo and several tabs to report
 extensions:
   - ru.one_c.allure.plugin.PathsPlugin
   - ru.one_c.allure.plugin.FailedPlugin
+  - ru.one_c.allure.plugin.ByHostPlugin
 jsFiles:
   - index.js
 cssFiles:

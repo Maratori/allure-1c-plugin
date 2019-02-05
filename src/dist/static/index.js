@@ -61,3 +61,34 @@ allure.api.addTab('failed', {
         });
     })
 });
+
+allure.api.addTranslation('en', {
+    tab: {
+        by_host: {
+            name: 'By Host'
+        }
+    }
+});
+
+allure.api.addTranslation('ru', {
+    tab: {
+        by_host: {
+            name: 'Машины'
+        }
+    }
+});
+
+allure.api.addTab('by_host', {
+    title: 'tab.by_host.name', icon: 'fa fa-server',
+    route: 'by_host(/)(:testGroup)(/)(:testResult)(/)(:testResultTab)(/)',
+    onEnter: (function (testGroup, testResult, testResultTab) {
+        return new allure.components.TreeLayout({
+            testGroup: testGroup,
+            testResult: testResult,
+            testResultTab: testResultTab,
+            tabName: 'tab.by_host.name',
+            baseUrl: 'by_host',
+            url: 'data/by_host.json'
+        });
+    })
+});
